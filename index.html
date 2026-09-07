@@ -50,7 +50,7 @@ button.green{background:#dff3ec;color:#416c5b} button.gray{background:#edf0f4;co
 
 .page{
   width:210mm;height:297mm;position:relative;margin:0 auto;background:#fffefb;
-  box-shadow:0 14px 28px rgba(0,0,0,.10);border-radius:10px;overflow:hidden;padding:9mm 9mm;isolation:isolate
+  box-shadow:0 14px 28px rgba(0,0,0,.10);border-radius:10px;overflow:hidden;padding:8mm 8mm;isolation:isolate
 }
 .bgImg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;opacity:.98}
 .pageInner{position:relative;z-index:1;height:100%;display:flex;flex-direction:column}
@@ -60,27 +60,27 @@ button.green{background:#dff3ec;color:#416c5b} button.gray{background:#edf0f4;co
   background:var(--headbg);color:#7f6174;font-weight:900;font-size:20pt;
   box-shadow:0 4px 0 rgba(236,229,238,.8)
 }
-.ribbon{display:inline-block;margin-top:4px;padding:5px 14px;border-radius:999px;background:var(--headbg);color:#876579;font-weight:700;font-size:10.7pt;border:1px solid var(--c1)}
-.contentGrid{display:grid;gap:2.7mm} .grid2p{grid-template-columns:1fr 1fr} .grid3p{grid-template-columns:1fr 1fr 1fr}
-.card{background:var(--cardbg);border:1.8px solid var(--c2);border-radius:16px;padding:2.2mm 2.8mm;backdrop-filter:blur(1.5px)}
+.ribbon{display:inline-block;margin-top:4px;padding:5px 14px;border-radius:999px;background:var(--headbg);color:#876579;font-weight:800;font-size:11.2pt;border:1px solid var(--c1)}
+.contentGrid{display:grid;gap:2.4mm} .grid2p{grid-template-columns:1fr 1fr} .grid3p{grid-template-columns:1fr 1fr 1fr}
+.card{background:var(--cardbg);border:1.8px solid var(--c2);border-radius:16px;padding:2.0mm 2.5mm;backdrop-filter:blur(1.5px)}
 .card.c1{border-color:var(--c1)} .card.c2{border-color:var(--c2)} .card.c3{border-color:var(--c3)} .card.c4{border-color:var(--c4)} .card.c5{border-color:var(--c5)}
-.cardHead{display:inline-block;margin-bottom:1.3mm;padding:3px 9px;border-radius:999px;background:var(--headbg);color:#74545f;font-weight:800;font-size:9.8pt;border:1px solid rgba(225,218,225,.9)}
-.cardBody{min-height:1.5em;white-space:pre-wrap;word-break:break-word;font-size:10.1pt;line-height:1.48;color:var(--ink)}
-.cardBody.small{font-size:9.4pt}
-.talkTitle{font-size:12.5pt;font-weight:800;line-height:1.35}
-.researcherName{font-size:12.8pt;font-weight:900;line-height:1.25}
+.cardHead{display:inline-block;margin-bottom:1.2mm;padding:3px 10px;border-radius:999px;background:var(--headbg);color:#74545f;font-weight:900;font-size:10.8pt;border:1px solid rgba(225,218,225,.9)}
+.cardBody{min-height:1.5em;white-space:pre-wrap;word-break:break-word;font-size:11.4pt;line-height:1.42;color:var(--ink);font-weight:700}
+.cardBody.small{font-size:10.6pt;font-weight:700}
+.talkTitle{font-size:14.6pt;font-weight:900;line-height:1.28}
+.researcherName{font-size:15.2pt;font-weight:900;line-height:1.18}
 .freeMedia{display:flex;flex-direction:column;gap:7px}
 .freeMedia img{
   display:block;max-width:100%;max-height:26mm;object-fit:contain;
   border-radius:10px;border:1px solid rgba(220,220,230,.9);background:rgba(255,255,255,.78)
 }
 .hidden{display:none!important}
- .guide{color:#b79f96} .mid{min-height:13mm} .wide{min-height:17mm}
-.tagArea span{display:inline-block;margin:2px 5px 2px 0;padding:2px 8px;border-radius:999px;background:var(--headbg);border:1px solid var(--c3);font-size:9.1pt}
-.footerLine{margin-top:auto;text-align:center;color:#7c6a83;font-weight:700;font-size:9.7pt}
+ .guide{color:#b79f96} .mid{min-height:12mm} .wide{min-height:15mm}
+.tagArea span{display:inline-block;margin:2px 5px 2px 0;padding:2px 9px;border-radius:999px;background:var(--headbg);border:1px solid var(--c3);font-size:10pt;font-weight:800}
+.footerLine{margin-top:auto;text-align:center;color:#7c6a83;font-weight:800;font-size:10.3pt}
 #exportStage{position:fixed;left:-10000px;top:0;visibility:visible;z-index:-1;pointer-events:none}
 
-@media(max-width:1240px){.layout{grid-template-columns:1fr} .page{width:100%;height:auto;aspect-ratio:1055/1491}}
+@media(max-width:1240px){body{min-width:1180px}.wrap{max-width:1380px}.layout{grid-template-columns:430px 1fr}.page{width:210mm;height:297mm;aspect-ratio:auto}}
 @media print{
   @page{size:A4 portrait;margin:0}
   body{background:#fff}
@@ -118,7 +118,7 @@ async function ensureHtml2Canvas(){
 <div class="wrap">
   <div class="header">
     <h1>JPS研究者プロフ帳</h1>
-    <p>質問を1ページ分に絞った版です。背景ごとにカードの色味も少し変わります。</p>
+    <p>質問を1ページ分に絞った版です。スマホでもPCと同じA4レイアウトで表示・PNG出力します。文字も少し大きく太くして、SNSで見やすい版です。</p>
   </div>
 
   <div class="layout">
@@ -202,13 +202,13 @@ async function ensureHtml2Canvas(){
             <div class="card c4"><div class="cardHead">発表形式</div><div id="pv_format" class="cardBody guide">＿＿＿＿＿＿</div></div>
           </div>
 
-          <div style="height:2.5mm"></div>
+          <div style="height:2.0mm"></div>
           <div class="card c5">
             <div class="cardHead">発表タイトル</div>
             <div id="pv_talktitle" class="cardBody talkTitle wide guide">＿＿＿＿＿＿＿＿＿＿</div>
           </div>
 
-          <div style="height:2.5mm"></div>
+          <div style="height:2.0mm"></div>
           <div class="contentGrid grid2p">
             <div class="card c1"><div class="cardHead">研究者名</div><div id="pv_name" class="cardBody researcherName guide">＿＿＿＿＿＿</div></div>
             <div class="card c2"><div class="cardHead">所属</div><div id="pv_affiliation" class="cardBody small guide">＿＿＿＿＿＿</div></div>
@@ -216,7 +216,7 @@ async function ensureHtml2Canvas(){
             <div class="card c3"><div class="cardHead">SNSアカウント</div><div id="pv_nick" class="cardBody guide">＿＿＿＿＿＿</div></div>
           </div>
 
-          <div style="height:2.5mm"></div>
+          <div style="height:2.0mm"></div>
           <div class="contentGrid grid2p">
             <div class="card c3"><div class="cardHead">いま何を研究してる？</div><div id="pv_research" class="cardBody small wide guide">＿＿＿＿＿＿</div></div>
             <div class="card c1"><div class="cardHead">どこが面白い？</div><div id="pv_appeal" class="cardBody small wide guide">＿＿＿＿＿＿</div></div>
@@ -231,12 +231,12 @@ async function ensureHtml2Canvas(){
             <div class="card c3"><div class="cardHead">最近いちばん嬉しかったこと</div><div id="pv_happy" class="cardBody small mid guide">＿＿＿＿＿＿</div></div>
           </div>
 
-          <div style="height:2.5mm"></div>
+          <div style="height:2.0mm"></div>
           <div class="card c5">
             <div class="cardHead">フリースペース</div>
             <div class="freeMedia">
               <img id="pv_free_img" class="hidden" alt="フリースペース画像">
-              <div id="pv_free" class="cardBody small guide">＿＿＿＿＿＿</div>
+              <div id="pv_free" class="cardBody small guide" style="min-height:16mm">＿＿＿＿＿＿</div>
             </div>
           </div>
 
@@ -394,39 +394,60 @@ function inlineComputedStyles(src,tgt){
 
 async function exportPage(){
   renderPage();
+
   try{
     const html2canvas = await ensureHtml2Canvas();
-    const source=document.getElementById("page1");
+    const source = document.getElementById("page1");
+    const stage = document.getElementById("exportStage");
+    stage.innerHTML = "";
 
-    // wait for background image to be ready
-    const bgImg = source.querySelector(".bgImg");
+    // Clone the already-populated profile into a fixed desktop/A4-sized export stage.
+    const clone = source.cloneNode(true);
+    clone.style.width = "794px";
+    clone.style.height = "1123px";
+    clone.style.margin = "0";
+    clone.style.borderRadius = "0";
+    clone.style.boxShadow = "none";
+    clone.style.position = "relative";
+    clone.style.overflow = "hidden";
+
+    stage.appendChild(clone);
+
+    // Make sure the selected background image in the clone is fully loaded.
+    const bgImg = clone.querySelector(".bgImg");
     if(bgImg && !bgImg.complete){
       await new Promise((resolve,reject)=>{
-        bgImg.onload=resolve;
-        bgImg.onerror=reject;
+        bgImg.onload = resolve;
+        bgImg.onerror = reject;
       });
     }
 
-    const canvas = await html2canvas(source,{
+    await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+
+    const canvas = await html2canvas(clone,{
       backgroundColor:"#ffffff",
-      scale:3,
+      scale:4,
       useCORS:true,
       allowTaint:true,
       logging:false,
-      width:source.offsetWidth,
-      height:source.offsetHeight,
-      windowWidth:document.documentElement.scrollWidth,
-      windowHeight:document.documentElement.scrollHeight
+      width:794,
+      height:1123,
+      windowWidth:1180,
+      windowHeight:1400,
+      scrollX:0,
+      scrollY:0
     });
 
-    const a=document.createElement("a");
-    a.href=canvas.toDataURL("image/png");
-    a.download="JPS研究者プロフ帳.png";
+    const a = document.createElement("a");
+    a.href = canvas.toDataURL("image/png");
+    a.download = "JPS研究者プロフ帳.png";
     document.body.appendChild(a);
     a.click();
     a.remove();
+
+    stage.innerHTML = "";
   }catch(e){
-    alert("画像出力に失敗しました。ネット接続のある Chrome / Edge でお試しください。");
+    alert("画像出力に失敗しました。ネット接続のある Chrome / Edge / Safari でお試しください。");
     console.error(e);
   }
 }
