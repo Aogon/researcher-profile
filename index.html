@@ -67,6 +67,8 @@ button.green{background:#dff3ec;color:#416c5b} button.gray{background:#edf0f4;co
 .cardHead{display:inline-block;margin-bottom:1.2mm;padding:3px 10px;border-radius:999px;background:var(--headbg);color:#74545f;font-weight:900;font-size:10.8pt;border:1px solid rgba(225,218,225,.9)}
 .cardBody{min-height:1.5em;white-space:pre-wrap;word-break:break-word;font-size:11.4pt;line-height:1.42;color:var(--ink);font-weight:700}
 .cardBody.small{font-size:10.6pt;font-weight:700}
+.cardBody.autofit{overflow:hidden}
+.cardBody.autofit.small{overflow:hidden}
 .talkTitle{font-size:14.6pt;font-weight:900;line-height:1.28}
 .researcherName{font-size:15.2pt;font-weight:900;line-height:1.18}
 .freeMedia{display:flex;flex-direction:column;gap:7px}
@@ -197,38 +199,38 @@ async function ensureHtml2Canvas(){
           </div>
 
           <div class="contentGrid grid3p">
-            <div class="card c1"><div class="cardHead">講演番号</div><div id="pv_jpsno" class="cardBody guide">＿＿＿＿＿＿</div></div>
-            <div class="card c2"><div class="cardHead">領域</div><div id="pv_area" class="cardBody guide">＿＿＿＿＿＿</div></div>
-            <div class="card c4"><div class="cardHead">発表形式</div><div id="pv_format" class="cardBody guide">＿＿＿＿＿＿</div></div>
+            <div class="card c1"><div class="cardHead">講演番号</div><div id="pv_jpsno" class="cardBody autofit guide">＿＿＿＿＿＿</div></div>
+            <div class="card c2"><div class="cardHead">領域</div><div id="pv_area" class="cardBody autofit guide">＿＿＿＿＿＿</div></div>
+            <div class="card c4"><div class="cardHead">発表形式</div><div id="pv_format" class="cardBody autofit guide">＿＿＿＿＿＿</div></div>
           </div>
 
           <div style="height:2.0mm"></div>
           <div class="card c5">
             <div class="cardHead">発表タイトル</div>
-            <div id="pv_talktitle" class="cardBody talkTitle wide guide">＿＿＿＿＿＿＿＿＿＿</div>
+            <div id="pv_talktitle" class="cardBody autofit talkTitle wide guide">＿＿＿＿＿＿＿＿＿＿</div>
           </div>
 
           <div style="height:2.0mm"></div>
           <div class="contentGrid grid2p">
-            <div class="card c1"><div class="cardHead">研究者名</div><div id="pv_name" class="cardBody researcherName guide">＿＿＿＿＿＿</div></div>
-            <div class="card c2"><div class="cardHead">所属</div><div id="pv_affiliation" class="cardBody small guide">＿＿＿＿＿＿</div></div>
-            <div class="card c4"><div class="cardHead">学年 / 立場</div><div id="pv_grade" class="cardBody guide">＿＿＿＿＿＿</div></div>
-            <div class="card c3"><div class="cardHead">SNSアカウント</div><div id="pv_nick" class="cardBody guide">＿＿＿＿＿＿</div></div>
+            <div class="card c1"><div class="cardHead">研究者名</div><div id="pv_name" class="cardBody autofit researcherName guide">＿＿＿＿＿＿</div></div>
+            <div class="card c2"><div class="cardHead">所属</div><div id="pv_affiliation" class="cardBody autofit small guide">＿＿＿＿＿＿</div></div>
+            <div class="card c4"><div class="cardHead">学年 / 立場</div><div id="pv_grade" class="cardBody autofit guide">＿＿＿＿＿＿</div></div>
+            <div class="card c3"><div class="cardHead">SNSアカウント</div><div id="pv_nick" class="cardBody autofit guide">＿＿＿＿＿＿</div></div>
           </div>
 
           <div style="height:2.0mm"></div>
           <div class="contentGrid grid2p">
-            <div class="card c3"><div class="cardHead">いま何を研究してる？</div><div id="pv_research" class="cardBody small wide guide">＿＿＿＿＿＿</div></div>
-            <div class="card c1"><div class="cardHead">どこが面白い？</div><div id="pv_appeal" class="cardBody small wide guide">＿＿＿＿＿＿</div></div>
+            <div class="card c3"><div class="cardHead">いま何を研究してる？</div><div id="pv_research" class="cardBody autofit small wide guide">＿＿＿＿＿＿</div></div>
+            <div class="card c1"><div class="cardHead">どこが面白い？</div><div id="pv_appeal" class="cardBody autofit small wide guide">＿＿＿＿＿＿</div></div>
 
-            <div class="card c2"><div class="cardHead">よく使う考え方・手法</div><div id="pv_tools" class="cardBody small mid guide">＿＿＿＿＿＿</div></div>
+            <div class="card c2"><div class="cardHead">よく使う考え方・手法</div><div id="pv_tools" class="cardBody autofit small mid guide">＿＿＿＿＿＿</div></div>
             <div class="card c4"><div class="cardHead">気になるキーワード</div><div id="pv_keywords" class="cardBody small tagArea guide"></div></div>
 
-            <div class="card c5"><div class="cardHead">いま一番わからないこと</div><div id="pv_unknown" class="cardBody small mid guide">＿＿＿＿＿＿</div></div>
-            <div class="card c1"><div class="cardHead">話しかけてもらえると嬉しい話題</div><div id="pv_talkto" class="cardBody small mid guide">＿＿＿＿＿＿</div></div>
+            <div class="card c5"><div class="cardHead">いま一番わからないこと</div><div id="pv_unknown" class="cardBody autofit small mid guide">＿＿＿＿＿＿</div></div>
+            <div class="card c1"><div class="cardHead">話しかけてもらえると嬉しい話題</div><div id="pv_talkto" class="cardBody autofit small mid guide">＿＿＿＿＿＿</div></div>
 
-            <div class="card c4"><div class="cardHead">今回のJPSでやりたいこと</div><div id="pv_goal" class="cardBody small mid guide">＿＿＿＿＿＿</div></div>
-            <div class="card c3"><div class="cardHead">最近いちばん嬉しかったこと</div><div id="pv_happy" class="cardBody small mid guide">＿＿＿＿＿＿</div></div>
+            <div class="card c4"><div class="cardHead">今回のJPSでやりたいこと</div><div id="pv_goal" class="cardBody autofit small mid guide">＿＿＿＿＿＿</div></div>
+            <div class="card c3"><div class="cardHead">最近いちばん嬉しかったこと</div><div id="pv_happy" class="cardBody autofit small mid guide">＿＿＿＿＿＿</div></div>
           </div>
 
           <div style="height:2.0mm"></div>
@@ -236,7 +238,7 @@ async function ensureHtml2Canvas(){
             <div class="cardHead">フリースペース</div>
             <div class="freeMedia">
               <img id="pv_free_img" class="hidden" alt="フリースペース画像">
-              <div id="pv_free" class="cardBody small guide" style="min-height:16mm">＿＿＿＿＿＿</div>
+              <div id="pv_free" class="cardBody autofit small guide" style="min-height:16mm">＿＿＿＿＿＿</div>
             </div>
           </div>
 
@@ -283,6 +285,42 @@ function setText(id,text,fallback="＿＿＿＿＿＿＿＿＿＿"){
   const el=document.getElementById(id);
   if(text){el.textContent=text;el.classList.remove("guide")}
   else{el.textContent=fallback;el.classList.add("guide")}
+}
+
+function fitTextElement(el){
+  if(!el || el.classList.contains("guide")) return;
+
+  const isTitle = el.id === "pv_talktitle";
+  const isName = el.id === "pv_name";
+  const isSmall = el.classList.contains("small");
+
+  let maxPt = isName ? 15.2 : (isTitle ? 14.6 : (isSmall ? 10.6 : 11.4));
+  let minPt = isName ? 9.8 : (isTitle ? 9.2 : (isSmall ? 7.8 : 8.4));
+
+  // Reset first, otherwise a previously shrunk field may stay too small.
+  el.style.fontSize = maxPt + "pt";
+
+  const fits = () =>
+    el.scrollHeight <= el.clientHeight + 1 &&
+    el.scrollWidth <= el.clientWidth + 1;
+
+  if(fits()) return;
+
+  let lo = minPt;
+  let hi = maxPt;
+
+  // Binary search the largest font that fits.
+  for(let i=0;i<12;i++){
+    const mid=(lo+hi)/2;
+    el.style.fontSize=mid+"pt";
+    if(fits()) lo=mid;
+    else hi=mid;
+  }
+  el.style.fontSize=lo.toFixed(2)+"pt";
+}
+
+function fitAllText(){
+  document.querySelectorAll(".autofit").forEach(fitTextElement);
 }
 
 function setImage(id,dataUrl){
@@ -368,6 +406,7 @@ function renderPage(){
   const parts=v("keywords").split(/[、,\n]/).map(s=>s.trim()).filter(Boolean);
   if(parts.length){kw.innerHTML=parts.map(x=>`<span>${x}</span>`).join("");kw.classList.remove("guide")}
   else{kw.innerHTML="<span>keyword</span><span>concept</span><span>method</span>";kw.classList.add("guide")}
+  requestAnimationFrame(()=>requestAnimationFrame(fitAllText));
   saveLocal();
 }
 
@@ -412,6 +451,26 @@ async function exportPage(){
     clone.style.overflow = "hidden";
 
     stage.appendChild(clone);
+
+    // Re-fit all dynamic text in the fixed A4-sized clone used for PNG export.
+    clone.querySelectorAll(".autofit").forEach(el=>{
+      const isTitle = el.id === "pv_talktitle";
+      const isName = el.id === "pv_name";
+      const isSmall = el.classList.contains("small");
+      let maxPt = isName ? 15.2 : (isTitle ? 14.6 : (isSmall ? 10.6 : 11.4));
+      let minPt = isName ? 9.8 : (isTitle ? 9.2 : (isSmall ? 7.8 : 8.4));
+      el.style.fontSize=maxPt+"pt";
+      const fits=()=>el.scrollHeight<=el.clientHeight+1 && el.scrollWidth<=el.clientWidth+1;
+      if(!fits()){
+        let lo=minPt, hi=maxPt;
+        for(let i=0;i<12;i++){
+          const mid=(lo+hi)/2;
+          el.style.fontSize=mid+"pt";
+          if(fits()) lo=mid; else hi=mid;
+        }
+        el.style.fontSize=lo.toFixed(2)+"pt";
+      }
+    });
 
     // Make sure the selected background image in the clone is fully loaded.
     const bgImg = clone.querySelector(".bgImg");
@@ -459,6 +518,13 @@ document.getElementById("freeFile").addEventListener("change",()=>{
   const reader=new FileReader();
   reader.onload=()=>{freeImageData=reader.result;renderPage();};
   reader.readAsDataURL(file);
+});
+
+
+let fitResizeTimer=null;
+window.addEventListener("resize",()=>{
+  clearTimeout(fitResizeTimer);
+  fitResizeTimer=setTimeout(fitAllText,120);
 });
 
 initBg();
